@@ -13,4 +13,8 @@ install:
   - pip install docutils==$DOCUTILS
   - pip install -r test-reqs.txt
 before_script: flake8
-script: make test
+script: 
+  - cd doc
+  - make html
+  - cd ..
+  - make test
